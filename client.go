@@ -283,7 +283,7 @@ func (c *Client) Exec(req *http.Request, i util.Response) (*resources.Non2XXErro
 
 	jerr := json.NewDecoder(tr).Decode(i)
 	if c.debug {
-		fmt.Printf("------DEBUG------\n[request url]\n%v\n[response header]\n%v\n[response body]\n%s\n------DEBUG END------\n", req.URL, res.Header, debugBuf.String())
+		fmt.Printf("------DEBUG------\n[request url]\n%v\n[request header]\n%v\n[response header]\n%v\n[response body]\n%s\n------DEBUG END------\n", req.URL, req.Header, res.Header, debugBuf.String())
 	}
 	if jerr != nil && jerr != io.EOF {
 		return nil, jerr
