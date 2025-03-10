@@ -3,8 +3,8 @@ package hidereply
 import (
 	"context"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/tweet/hidereply/types"
+	"github.com/Arhius/gotwi"
+	"github.com/Arhius/gotwi/tweet/hidereply/types"
 )
 
 const updateEndpoint = "https://api.twitter.com/2/tweets/:id/hidden"

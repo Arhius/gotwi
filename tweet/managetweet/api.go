@@ -3,8 +3,8 @@ package managetweet
 import (
 	"context"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/tweet/managetweet/types"
+	"github.com/Arhius/gotwi"
+	"github.com/Arhius/gotwi/tweet/managetweet/types"
 )
 
 const (

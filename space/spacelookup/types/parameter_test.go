@@ -3,8 +3,8 @@ package types_test
 import (
 	"testing"
 
-	"github.com/michimani/gotwi/fields"
-	"github.com/michimani/gotwi/space/spacelookup/types"
+	"github.com/Arhius/gotwi/fields"
+	"github.com/Arhius/gotwi/space/spacelookup/types"
 	"github.com/stretchr/testify/assert"
 )
 

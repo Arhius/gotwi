@@ -3,8 +3,8 @@ package timeline
 import (
 	"context"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/tweet/timeline/types"
+	"github.com/Arhius/gotwi"
+	"github.com/Arhius/gotwi/tweet/timeline/types"
 )
 
 const (

@@ -3,7 +3,7 @@ package gotwi_test
 import (
 	"testing"
 
-	"github.com/michimani/gotwi"
+	"github.com/Arhius/gotwi"
 	"github.com/stretchr/testify/assert"
 )
 

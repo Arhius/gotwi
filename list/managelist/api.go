@@ -3,8 +3,8 @@ package managelist
 import (
 	"context"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/list/managelist/types"
+	"github.com/Arhius/gotwi"
+	"github.com/Arhius/gotwi/list/managelist/types"
 )
 
 const (

@@ -3,8 +3,8 @@ package retweet
 import (
 	"context"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/tweet/retweet/types"
+	"github.com/Arhius/gotwi"
+	"github.com/Arhius/gotwi/tweet/retweet/types"
 )
 
 const (

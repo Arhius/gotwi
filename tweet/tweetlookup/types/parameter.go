@@ -5,8 +5,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/michimani/gotwi/fields"
-	"github.com/michimani/gotwi/internal/util"
+	"github.com/Arhius/gotwi/fields"
+	"github.com/Arhius/gotwi/internal/util"
 )
 
 type ListInput struct {

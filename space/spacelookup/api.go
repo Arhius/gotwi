@@ -3,8 +3,8 @@ package spacelookup
 import (
 	"context"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/space/spacelookup/types"
+	"github.com/Arhius/gotwi"
+	"github.com/Arhius/gotwi/space/spacelookup/types"
 )
 
 const (

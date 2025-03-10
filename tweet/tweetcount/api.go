@@ -3,8 +3,8 @@ package tweetcount
 import (
 	"context"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/tweet/tweetcount/types"
+	"github.com/Arhius/gotwi"
+	"github.com/Arhius/gotwi/tweet/tweetcount/types"
 )
 
 const (

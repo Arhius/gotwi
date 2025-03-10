@@ -3,8 +3,8 @@ package userlookup
 import (
 	"context"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/user/userlookup/types"
+	"github.com/Arhius/gotwi"
+	"github.com/Arhius/gotwi/user/userlookup/types"
 )
 
 const (

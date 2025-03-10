@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/michimani/gotwi"
+	"github.com/Arhius/gotwi"
 )
 
 func main() {

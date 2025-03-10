@@ -1,7 +1,9 @@
 module gotwi-example-4
 
-go 1.18
+go 1.22
 
-require github.com/michimani/gotwi v0.11.6
+toolchain go1.24.0
 
-replace github.com/michimani/gotwi v0.11.6 => ../../
+require github.com/Arhius/gotwi v0.11.6
+
+replace github.com/Arhius/gotwi v0.11.6 => ../../

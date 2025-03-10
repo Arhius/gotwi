@@ -2,8 +2,8 @@ package personalizedtrend
 
 import (
 	"context"
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/trend/personalizedtrend/types"
+	"github.com/Arhius/gotwi"
+	"github.com/Arhius/gotwi/trend/personalizedtrend/types"
 )
 
 const listEndpoint = "https://api.twitter.com/2/users/personalized_trends"
