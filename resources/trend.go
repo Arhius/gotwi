@@ -1,6 +1,11 @@
 package resources
 
 type Trend struct {
+	TrendName  *string `json:"trend_name"`
+	TweetCount *int    `json:"tweet_count"`
+}
+
+type PersonalizedTrend struct {
 	Category      *string `json:"category"`
 	PostCount     *int    `json:"post_count"`
 	TrendName     *string `json:"trend_name"`

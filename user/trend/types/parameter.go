@@ -8,7 +8,7 @@ import (
 
 type ListInput struct {
 	accessToken string
-	Fields      fields.TrendFieldList
+	Fields      fields.PersonalizedTrendFieldList
 }
 
 var listQueryParameters = map[string]struct{}{

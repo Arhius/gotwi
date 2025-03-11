@@ -4,11 +4,11 @@ import (
 	"testing"
 
 	"github.com/Arhius/gotwi/fields"
-	"github.com/Arhius/gotwi/trend/personalizedtrend/types"
+	"github.com/Arhius/gotwi/trend/types"
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_PersonalizedTrend_SetAccessToken(t *testing.T) {
+func Test_ListTrend_SetAccessToken(t *testing.T) {
 	cases := []struct {
 		name   string
 		token  string
@@ -35,8 +35,9 @@ func Test_PersonalizedTrend_SetAccessToken(t *testing.T) {
 	}
 }
 
-func Test_PersonalizedTrend_ResolveEndpoint(t *testing.T) {
+func Test_ListTrend_ResolveEndpoint(t *testing.T) {
 	const endpointRoot = "test/endpoint/"
+	const endpointBase = "test/endpoint/:id"
 
 	cases := []struct {
 		name   string
@@ -44,28 +45,48 @@ func Test_PersonalizedTrend_ResolveEndpoint(t *testing.T) {
 		expect string
 	}{
 		{
-			name:   "empty params",
-			params: &types.ListInput{},
-			expect: endpointRoot,
+			name: "only required parameter",
+			params: &types.ListInput{
+				ID: "lid",
+			},
+			expect: endpointRoot + "lid",
 		},
 		{
 			name: "with fields",
 			params: &types.ListInput{
-				Fields: fields.TrendFieldList{"category", "post_count"},
+				ID:     "lid",
+				Fields: fields.TrendFieldList{"ex1", "ex2"},
 			},
-			expect: endpointRoot + "?personalized_trend.fields=category%2Cpost_count",
+			expect: endpointRoot + "lid" + "?trend.fields=ex1%2Cex2",
+		},
+		{
+			name: "with max_trends",
+			params: &types.ListInput{
+				ID:        "lid",
+				MaxTrends: 10,
+			},
+			expect: endpointRoot + "lid" + "?max_trends=10",
+		},
+		{
+			name: "all query parameters",
+			params: &types.ListInput{
+				ID:        "lid",
+				MaxTrends: 10,
+				Fields:    fields.TrendFieldList{"ex1"},
+			},
+			expect: endpointRoot + "lid" + "?max_trends=10&trend.fields=ex1",
 		},
 	}
 
 	for _, c := range cases {
 		t.Run(c.name, func(tt *testing.T) {
-			ep := c.params.ResolveEndpoint(endpointRoot)
+			ep := c.params.ResolveEndpoint(endpointBase)
 			assert.Equal(tt, c.expect, ep)
 		})
 	}
 }
 
-func Test_PersonalizedTrend_Body(t *testing.T) {
+func Test_ListTrend_Body(t *testing.T) {
 	cases := []struct {
 		name   string
 		params *types.ListInput
@@ -75,10 +96,8 @@ func Test_PersonalizedTrend_Body(t *testing.T) {
 			params: &types.ListInput{},
 		},
 		{
-			name: "some params",
-			params: &types.ListInput{
-				Fields: fields.TrendFieldList{"category", "post_count"},
-			},
+			name:   "some params",
+			params: &types.ListInput{ID: "sid"},
 		},
 	}
 

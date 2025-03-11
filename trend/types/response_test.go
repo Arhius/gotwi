@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/Arhius/gotwi/resources"
-	"github.com/Arhius/gotwi/trend/personalizedtrend/types"
+	"github.com/Arhius/gotwi/trend/types"
 	"github.com/stretchr/testify/assert"
 )
 

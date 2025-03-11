@@ -1,15 +1,15 @@
-package personalizedtrend
+package trend
 
 import (
 	"context"
 	"github.com/Arhius/gotwi"
-	"github.com/Arhius/gotwi/trend/personalizedtrend/types"
+	"github.com/Arhius/gotwi/trend/types"
 )
 
-const listEndpoint = "https://api.twitter.com/2/users/personalized_trends"
+const listEndpoint = "https://api.x.com/2/trends/by/woeid/:id"
 
-// Returns Personalized trends for the authenticated user.
-// https://docs.x.com/x-api/users/personalized-trends
+// Returns trends list.
+// https://docs.x.com/x-api/trends/trends
 func List(ctx context.Context, c *gotwi.Client, p *types.ListInput) (*types.ListOutput, error) {
 	res := &types.ListOutput{}
 	if err := c.CallAPI(ctx, listEndpoint, "GET", p, res); err != nil {
