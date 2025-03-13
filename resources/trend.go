@@ -7,7 +7,7 @@ type Trend struct {
 
 type PersonalizedTrend struct {
 	Category      *string `json:"category"`
-	PostCount     *int    `json:"post_count"`
+	PostCount     *string `json:"post_count"`
 	TrendName     *string `json:"trend_name"`
 	TrendingSince *string `json:"trending_since"`
 }
